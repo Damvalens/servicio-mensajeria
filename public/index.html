@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Mensajería</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #messages { list-style-type: none; padding: 0; }
+        #messages li { padding: 8px; background: #f1f1f1; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Servicio de Mensajería</h1>
+    <ul id="messages"></ul>
+    <input id="message" autocomplete="off" /><button id="send">Enviar</button>
+    <br><br>
+    <button id="startCall">Iniciar Llamada de Video</button>
+    <button id="startVoiceCall">Iniciar Llamada de Voz</button>
+    <button id="stopCall">Detener Llamada</button>
+	<button id="muteMic">Mutear Micrófono</button>
+	<label for="volumeControl">Volumen:</label>
+    <input id="volumeControl" type="range" min="0" max="100" value="100">
+	<p>Duración de la Llamada: <span id="callDuration">00:00</span></p>
+	<button id="joinCall">Unirse a la Llamada</button>
+
+
+
+    <br><br>
+    <video id="localVideo" autoplay muted></video>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
